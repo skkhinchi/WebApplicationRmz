@@ -122,3 +122,4 @@ C:\Users\Admin\Documents\WebApplicationRmz\WebApplicationRmz\obj\Debug\net5.0\re
 C:\Users\Admin\Documents\WebApplicationRmz\WebApplicationRmz\bin\Debug\net5.0\FakeItEasy.dll
 C:\Users\Admin\Documents\WebApplicationRmz\WebApplicationRmz\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
 C:\Users\Admin\Documents\WebApplicationRmz\WebApplicationRmz\bin\Debug\net5.0\System.IO.Packaging.dll
+C:\Users\Admin\Documents\WebApplicationRmz\WebApplicationRmz\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll

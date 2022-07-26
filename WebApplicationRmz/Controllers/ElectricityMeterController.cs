@@ -23,6 +23,10 @@ namespace WebApplicationRmz.Controllers
             _service = service;
         }
 
+        public ElectricityMeterController()
+        {
+        }
+
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
@@ -34,21 +38,7 @@ namespace WebApplicationRmz.Controllers
         [HttpGet("MeterDetailsById/{id}")]
         public IActionResult GetMeterDetails(int id)
         {
-            //var MeterData = (from e in _ApplicationDbContext.ElectricityMeters
-            //                join z in _ApplicationDbContext.Zones on e.ZId equals z.ZId
-            //                // join b in _ApplicationDbContext.Buildings on z.BId equals b.BId
-            //                 //join f in _ApplicationDbContext.Facilites on b.FId equals f.FId
-
-            //                 select new ElectricityMeterDetails()
-            //                {
-            //                    MeterId = id,
-            //                    MeterReading=e.Reading,
-            //                    ZoneName = z.ZName,
-            //                    //BuildingName = b.BName,
-            //                    //FacilityName = f.FName
-            //                }).ToList();
-
-            //return MeterData.FirstOrDefault(c => c.MeterId == id);
+           
             var items = _service.GetMeterDetails(id);
             return Ok(items);
 
@@ -57,19 +47,20 @@ namespace WebApplicationRmz.Controllers
 
 
 
-        //[HttpGet("{id}")]
-        //public ElectricityMeter GetSingle(int id)
-        //{
-        //    return _ApplicationDbContext.ElectricityMeters.FirstOrDefault(c => c.EId == id);
-        //}
+        [HttpGet("{id}")]
+        public ElectricityMeter GetSingle(int id)
+        {
+            var items = _service.GetElectricityMeterById(id);
+            return items;
+        }
 
-        //[HttpPost]
-        //public void AddElectricityMeter([FromBody] ElectricityMeter electricityMeters)
-        //{
-        //    _ApplicationDbContext.ElectricityMeters.Add(electricityMeters);
-        //    _ApplicationDbContext.SaveChanges();
+        [HttpPost]
+        public ElectricityMeter AddElectricityMeter([FromBody] ElectricityMeter electricityMeters)
+        {
+            var items = _service.AddElectricityMeter(electricityMeters);
+            return items;
 
-        //}
+        }
 
 
         //[HttpPut("{id}")]

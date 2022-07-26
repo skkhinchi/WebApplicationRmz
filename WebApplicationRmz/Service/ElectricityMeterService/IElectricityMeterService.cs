@@ -13,7 +13,7 @@ namespace WebApplicationRmz.Service.ElectricityMeterService
         IEnumerable<ElectricityMeter> GetAll();
         ElectricityMeter AddElectricityMeter(ElectricityMeter electricityMeter);
         ElectricityMeter GetElectricityMeterById(int id);
-        void Delete(int id);
+      //  void Delete(int id);
         ElectricityMeterDetails GetMeterDetails(int id);
 
 

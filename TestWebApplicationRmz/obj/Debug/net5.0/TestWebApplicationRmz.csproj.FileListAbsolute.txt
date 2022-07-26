@@ -144,3 +144,5 @@ C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\obj\Debug\net5.
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\obj\Debug\net5.0\ref\TestWebApplicationRmz.dll
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\FakeItEasy.dll
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\nunit.framework.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\System.IO.Packaging.dll

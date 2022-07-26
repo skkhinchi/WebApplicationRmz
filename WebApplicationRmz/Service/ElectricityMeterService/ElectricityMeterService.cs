@@ -24,10 +24,10 @@ namespace WebApplicationRmz.Service.ElectricityMeterService
             return electricityMeter;
         }
 
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
+        //public void Delete(int id)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public IEnumerable<ElectricityMeter> GetAll()
         {

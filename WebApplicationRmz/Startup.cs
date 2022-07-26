@@ -1,3 +1,4 @@
+using Auth0.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +30,27 @@ namespace WebApplicationRmz
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
+
+
+
+            services.AddAuth0WebAppAuthentication(options =>
+            {
+                options.Domain = Configuration["Auth0:Domain"];
+                options.ClientId = Configuration["Auth0:ClientId"];
+                options.ClientSecret = Configuration["Auth0:ClientSecret"];
+            })
+            .WithAccessToken(options =>
+            {
+            options.Audience = Configuration["Auth0:Audience"];
+            options.UseRefreshTokens = true;
+            });
+
+
+
+
+
+
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -61,6 +82,11 @@ namespace WebApplicationRmz
             {
                 endpoints.MapControllers();
             });
+
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
         }
     }
 }
