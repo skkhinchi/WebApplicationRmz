@@ -114,7 +114,7 @@ namespace WebApplicationRmz.Controllers
         {
             _ApplicationDbContext.Zones.Update(zone);
             _ApplicationDbContext.SaveChanges();
-
+    
         }
 
 

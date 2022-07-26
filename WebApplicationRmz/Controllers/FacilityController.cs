@@ -22,6 +22,10 @@ namespace WebApplicationRmz.Controllers
             _ApplicationDbContext = ApplicationDbContext;
         }
 
+        public FacilityController()
+        {
+        }
+
         [HttpGet("GetAll")]
         public IEnumerable<Facility> GetAll()
         {

@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplicationRmz.Data;
+using WebApplicationRmz.Service.ElectricityMeterService;
 
 namespace WebApplicationRmz
 {
@@ -28,12 +29,13 @@ namespace WebApplicationRmz
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+           
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplicationRmz", Version = "v1" });
             });
+            services.AddScoped<IElectricityMeterService, ElectricityMeterService>();
             services.AddScoped<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("NewRmzConnection")));
