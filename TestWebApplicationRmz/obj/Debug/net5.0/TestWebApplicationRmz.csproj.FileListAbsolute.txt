@@ -146,3 +146,7 @@ C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\nunit.framework.dll
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
 C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\System.IO.Packaging.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\Auth0.AspNetCore.Authentication.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Documents\WebApplicationRmz\TestWebApplicationRmz\bin\Debug\net5.0\Octokit.dll

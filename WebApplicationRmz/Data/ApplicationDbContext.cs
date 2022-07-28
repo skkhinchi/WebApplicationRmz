@@ -21,6 +21,7 @@ namespace WebApplicationRmz.Data
         public DbSet<Facility> Facilites { get; set; }
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Zone> Zones { get; set; }
+        public DbSet<ShoppingItem> ShoppingItems { get; set; }
 
 
 
