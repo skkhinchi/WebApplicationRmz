@@ -60,10 +60,9 @@ namespace WebApplicationRmz.Migrations
 
             modelBuilder.Entity("WebApplicationRmz.Models.ElectricityMeter", b =>
                 {
-                    b.Property<int>("EId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("BId")
                         .HasColumnType("int");
@@ -71,13 +70,14 @@ namespace WebApplicationRmz.Migrations
                     b.Property<int>("FId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Reading")
-                        .HasColumnType("float");
+                    b.Property<string>("Reading")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZId")
                         .HasColumnType("int");
 
-                    b.HasKey("EId");
+                    b.HasKey("Id");
 
                     b.ToTable("ElectricityMeters");
                 });
@@ -110,8 +110,8 @@ namespace WebApplicationRmz.Migrations
                     b.Property<int>("FId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Reading")
-                        .HasColumnType("float");
+                    b.Property<string>("Reading")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZId")
                         .HasColumnType("int");

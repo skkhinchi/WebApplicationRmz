@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using WebApplicationRmz.Data;
 using WebApplicationRmz.Model;
@@ -15,50 +16,53 @@ namespace WebApplicationRmz.Service.ElectricityMeterService
             _ApplicationDbContext = ApplicationDbContext;
         }
 
-      
 
-        public ElectricityMeter AddElectricityMeter(ElectricityMeter electricityMeter)
-        {
-            _ApplicationDbContext.ElectricityMeters.Add(electricityMeter);
-            _ApplicationDbContext.SaveChanges();
-            return electricityMeter;
-        }
 
-        //public void Delete(int id)
+        //public ElectricityMeter AddElectricityMeter(ElectricityMeter electricityMeter)
         //{
-        //    throw new System.NotImplementedException();
+        //    _ApplicationDbContext.ElectricityMeters.Add(electricityMeter);
+        //    _ApplicationDbContext.SaveChanges();
+        //    return electricityMeter;
         //}
 
-        public IEnumerable<ElectricityMeter> GetAll()
-        {
-            return _ApplicationDbContext.ElectricityMeters;
-        }
+        ////public void Delete(int id)
+        ////{
+        ////    throw new System.NotImplementedException();
+        ////}
 
-        public ElectricityMeter GetElectricityMeterById(int id)
-        {
-            return _ApplicationDbContext.ElectricityMeters.FirstOrDefault(c => c.EId == id);
-        }
+        //public IEnumerable<ElectricityMeter> GetAll()
+        //{
+        //    return _ApplicationDbContext.ElectricityMeters;
+        //}
 
-        public ElectricityMeterDetails GetMeterDetails(int id)
-        {
-            var MeterData = (from e in _ApplicationDbContext.ElectricityMeters
-                             join z in _ApplicationDbContext.Zones on e.ZId equals z.ZId
-                             // join b in _ApplicationDbContext.Buildings on z.BId equals b.BId
-                             //join f in _ApplicationDbContext.Facilites on b.FId equals f.FId
+        //public ElectricityMeter GetElectricityMeterById(int id)
+        //{
+        //    return _ApplicationDbContext.ElectricityMeters.FirstOrDefault(c => c.EId == id);
+        //}
 
-                             select new ElectricityMeterDetails()
-                             {
-                                 MeterId = id,
-                                 MeterReading = e.Reading,
-                                 ZoneName = z.ZName,
-                                 //BuildingName = b.BName,
-                                 //FacilityName = f.FName
-                             }).ToList();
+        //public ElectricityMeterDetails GetFullDetails(Guid id)
+        //{
+        //    var MeterData = (from e in _ApplicationDbContext.ElectricityMeters
+        //                     join z in _ApplicationDbContext.Zones on e.ZId equals z.ZId
+        //                     // join b in _ApplicationDbContext.Buildings on z.BId equals b.BId
+        //                     //join f in _ApplicationDbContext.Facilites on b.FId equals f.FId
 
-            return MeterData.FirstOrDefault(c => c.MeterId == id);
+        //                     select new ElectricityMeterDetails()
+        //                     {
+        //                         MeterId = id,
+        //                         MeterReading = e.Reading,
+        //                         ZoneName = z.ZName,
+        //                         //BuildingName = b.BName,
+        //                         //FacilityName = f.FName
+        //                     }).ToList();
+
+        //    return MeterData.FirstOrDefault(c => c.MeterId == id);
 
 
-        }
+        //}
+        public ElectricityMeter Add(ElectricityMeter newItem) => throw new NotImplementedException();
+        public IEnumerable<ElectricityMeter> GetAllItems() => _ApplicationDbContext.ElectricityMeters;
 
+       
     }
 }

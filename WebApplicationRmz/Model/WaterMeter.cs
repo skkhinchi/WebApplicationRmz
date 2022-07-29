@@ -7,7 +7,7 @@ namespace WebApplicationRmz.Models
     {
         [Key]
         public int WId { get; set; }
-        public double Reading { get; set; }
+        public string Reading { get; set; }
        // public int FId { get; set; }
         [ForeignKey("FId")]
         public int FId { get; set; }

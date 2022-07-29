@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplicationRmz.Controllers
+namespace WebApplicationRmz.Controllers.AuthController
 {
     public class AuthController : Controller
     {

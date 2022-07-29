@@ -4,10 +4,11 @@ using WebApplicationRmz.Data;
 using WebApplicationRmz.Models;
 using System.Linq;
 using WebApplicationRmz.Model;
+using System;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace WebApplicationRmz.Controllers
+namespace WebApplicationRmz.Controllers.WaterMeterController
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -29,7 +30,7 @@ namespace WebApplicationRmz.Controllers
 
 
         [HttpGet("MeterDetailsId/{id}")]
-        public ElectricityMeterDetails GetMeterDetails(int id)
+        public ElectricityMeterDetails GetMeterDetails(Guid id)
         {
             var MeterData = (from e in _ApplicationDbContext.WaterMeters
                              join z in _ApplicationDbContext.Zones on e.ZId equals z.ZId

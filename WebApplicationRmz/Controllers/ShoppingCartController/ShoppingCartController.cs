@@ -3,7 +3,7 @@ using System;
 using WebApplicationRmz.Model;
 using WebApplicationRmz.Service.ShoppingCartService;
 
-namespace WebApplicationRmz.Controllers
+namespace WebApplicationRmz.Controllers.ShoppingCartController
 {
     [Route("api/[controller]")]
     [ApiController]

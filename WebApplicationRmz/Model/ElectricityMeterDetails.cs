@@ -1,10 +1,12 @@
-﻿namespace WebApplicationRmz.Model
+﻿using System;
+
+namespace WebApplicationRmz.Model
 {
     public class ElectricityMeterDetails
     {
-        public int MeterId { get; set; }
+        public Guid MeterId { get; set; }
 
-        public double MeterReading { get; set; }
+        public string MeterReading { get; set; }
 
         public string ZoneName{ get; set; }
 

@@ -51,7 +51,7 @@ namespace WebApplicationRmz
             services.AddScoped<IElectricityMeterService, ElectricityMeterService>();
             services.AddScoped<ApplicationDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("NewRmzConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("NewRmz2Connection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

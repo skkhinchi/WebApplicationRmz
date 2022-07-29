@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplicationRmz.Controllers;
 using WebApplicationRmz.Model;
+
+using WebApplicationRmz.Controllers.ShoppingCartController;
 using WebApplicationRmz.Service.ShoppingCartService;
 using Xunit;
 
-namespace TestWebApplicationRmz.ControllerTesting
+namespace TestWebApplicationRmz.ControllerTesting.ShoppingCartControllerTest
 {
     public class ShoppingCartControllerTest
     {
@@ -23,7 +24,7 @@ namespace TestWebApplicationRmz.ControllerTesting
         }
 
         [Fact]
-        public void Get_WhenCalled_ReturnsOkResult()
+        public void ReturnsOkResult()
         {
             // Act
             var okResult = _controller.Get();
@@ -33,7 +34,7 @@ namespace TestWebApplicationRmz.ControllerTesting
         }
 
         [Fact]
-        public void Get_WhenCalled_ReturnsAllItems()
+        public void ReturnsAllItems()
         {
             // Act
             var okResult = _controller.Get() as OkObjectResult;
@@ -47,7 +48,7 @@ namespace TestWebApplicationRmz.ControllerTesting
 
         //---------------------------------------
         [Fact]
-        public void GetById_UnknownGuidPassed_ReturnsNotFoundResult()
+        public void ReturnsNotFoundResult()
         {
             // Act
             var notFoundResult = _controller.Get(Guid.NewGuid());
@@ -57,7 +58,7 @@ namespace TestWebApplicationRmz.ControllerTesting
         }
 
         [Fact]
-        public void GetById_ExistingGuidPassed_ReturnsOkResult()
+        public void ReturnsOkResultWhenGuidRight()
         {
             // Arrange
             var testGuid = new Guid("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200");
@@ -70,7 +71,7 @@ namespace TestWebApplicationRmz.ControllerTesting
         }
 
         [Fact]
-        public void GetById_ExistingGuidPassed_ReturnsRightItem()
+        public void ReturnsRightItemWhenGuidRight()
         {
             // Arrange
             var testGuid = new Guid("ab2bd817-98cd-4cf3-a80a-53ea0cd9c200");
@@ -87,7 +88,7 @@ namespace TestWebApplicationRmz.ControllerTesting
 
         //------------------------------
         [Fact]
-        public void Add_InvalidObjectPassed_ReturnsBadRequest()
+        public void ReturnsBadRequest()
         {
             // Arrange
             var nameMissingItem = new ShoppingItem()
