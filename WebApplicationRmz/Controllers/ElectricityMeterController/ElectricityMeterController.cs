@@ -41,6 +41,19 @@ namespace WebApplicationRmz.Controllers.ElectricityMeterController
             return CreatedAtAction("Get", new { id = item.Id }, item);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult Get(Guid id)
+        {
+            var item = _service.GetById(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok(item);
+        }
+
+
+
 
         //private readonly IElectricityMeterService _service;
 

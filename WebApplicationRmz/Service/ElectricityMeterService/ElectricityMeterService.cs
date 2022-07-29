@@ -63,6 +63,8 @@ namespace WebApplicationRmz.Service.ElectricityMeterService
         public ElectricityMeter Add(ElectricityMeter newItem) => throw new NotImplementedException();
         public IEnumerable<ElectricityMeter> GetAllItems() => _ApplicationDbContext.ElectricityMeters;
 
-       
+        public ElectricityMeter GetById(Guid id) => throw new NotImplementedException();
+
+
     }
 }

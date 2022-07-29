@@ -46,6 +46,12 @@ namespace TestWebApplicationRmz.ControllerTesting.ElectricityControllersTest
             return newItem;
         }
 
+        public ElectricityMeter GetById(Guid id)
+        {
+            return _electricityMeters.Where(a => a.Id == id)
+                .FirstOrDefault();
+        }
+
         //public ElectricityMeterDetails GetFullDetails(int id)
         //{
         //    throw new NotImplementedException();

@@ -20,7 +20,9 @@ namespace WebApplicationRmz.Service.ElectricityMeterService
         IEnumerable<ElectricityMeter> GetAllItems();
         ElectricityMeter Add(ElectricityMeter newItem);
 
-      //  ElectricityMeterDetails GetFullDetails(Guid id);
+        ElectricityMeter GetById(Guid id);
+
+        //ElectricityMeterDetails GetFullDetails(Guid id);
 
 
 

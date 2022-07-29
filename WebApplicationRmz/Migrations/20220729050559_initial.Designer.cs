@@ -10,8 +10,8 @@ using WebApplicationRmz.Data;
 namespace WebApplicationRmz.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220728190741_Initial01")]
-    partial class Initial01
+    [Migration("20220729050559_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
